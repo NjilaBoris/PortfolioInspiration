@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const App = () => {
   return (
     <ReactLenis root options={{ duration: 2 }}>
-      <div>
+      <div className="relative">
         <Navigation />
         <Socials />
         <Hero />
