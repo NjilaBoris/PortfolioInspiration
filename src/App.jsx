@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
+import Navigation from "./components/Navigation";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const App = () => {
@@ -21,7 +22,10 @@ const App = () => {
   );
   return (
     <div ref={container} id="smooth-wrapper">
-      <div id="smooth-content" className="relative"></div>
+      <div id="smooth-content" className="relative">
+        <Navigation />
+        <div className="h-screen bg-blue-600s" />
+      </div>
     </div>
   );
 };
