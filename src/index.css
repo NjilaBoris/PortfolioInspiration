@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import "tailwindcss";
 @font-face {
   font-family: Garde;
@@ -5,8 +6,26 @@
   /* src: url("/public/font/AVGARDD_2.TTF");
   src: url("/public/font/AVGARDDO_2.TTF"); */
 }
+@theme {
+  --font-Nunito: "Nunito Sans", sans-serif;
+  --leading-n-1: 12.6481px;
+  --leading-n-2: 100px;
+}
 body {
   background-color: #0d0d0d;
   font-family: Garde;
   color: #b7ab98;
+}
+
+.mask {
+  mask-image: url("/mask.svg");
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+  background: #ec4e39;
+  position: absolute;
+  color: black;
+}
+p {
+  width: 1000px;
+  padding: 40px;
 }

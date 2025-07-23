@@ -4,6 +4,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+gsap.registerPlugin(ScrollTrigger, SplitText);
 const TextReveal = ({ children, animateOnScroll = true, delay = 0 }) => {
   const containerRef = useRef(null);
   const elementRef = useRef([]);

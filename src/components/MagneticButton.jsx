@@ -1,33 +1,39 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useRef, useState } from "react";
+import { motion } from "motion/react";
 
 export default function MagneticButton({ children }) {
-  const magnetic = useRef(null);
+  const ref = useRef(null);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const xTo = gsap.quickTo(magnetic.current, "x", {
-      duration: 1,
-      ease: "elastic.out(1, 0.3)",
-    });
-    const yTo = gsap.quickTo(magnetic.current, "y", {
-      duration: 1,
-      ease: "elastic.out(1, 0.3)",
-    });
+  const handleMouse = (e) => {
+    const { clientX, clientY } = e;
+    const { height, width, left, top } = ref.current.getBoundingClientRect();
+    const middleX = clientX - (left + width / 2);
+    const middleY = clientY - (top + height / 2);
+    setPosition({ x: middleX, y: middleY });
+  };
 
-    magnetic.current.addEventListener("mousemove", (e) => {
-      const { clientX, clientY } = e;
-      const { height, width, left, top } =
-        magnetic.current.getBoundingClientRect();
-      const x = clientX - (left + width / 2);
-      const y = clientY - (top + height / 2);
-      xTo(x);
-      yTo(y);
-    });
-    magnetic.current.addEventListener("mouseleave", () => {
-      xTo(0);
-      yTo(0);
-    });
-  }, []);
+  const reset = () => {
+    setPosition({ x: 0, y: 0 });
+  };
 
-  return React.cloneElement(children, { ref: magnetic });
+  const { x, y } = position;
+  return (
+    <motion.div
+      style={{ position: "relative" }}
+      ref={ref}
+      onMouseMove={handleMouse}
+      onMouseLeave={reset}
+      animate={{ x, y }}
+      transition={{
+        duration: 1,
+        type: "spring",
+        stiffness: 150,
+        damping: 15,
+        mass: 0.1,
+      }}
+    >
+      {children}
+    </motion.div>
+  );
 }

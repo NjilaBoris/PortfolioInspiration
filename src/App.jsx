@@ -1,32 +1,20 @@
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import { ReactLenis } from "lenis/react";
 import Navigation from "./components/Navigation";
+import Socials from "./components/Socials";
+import Hero from "./sections/Hero";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const App = () => {
-  const container = useRef(null);
-
-  useGSAP(
-    () => {
-      // Initialize ScrollSmoother
-      ScrollSmoother.create({
-        wrapper: "#smooth-wrapper",
-        content: "#smooth-content",
-        smooth: 2.5,
-        effects: true,
-      });
-    },
-    { scope: container }
-  );
   return (
-    <div ref={container} id="smooth-wrapper">
-      <div id="smooth-content" className="relative">
+    <ReactLenis root options={{ duration: 2 }}>
+      <div>
         <Navigation />
-        <div className="h-screen bg-blue-600s" />
+        <Socials />
+        <Hero />
       </div>
-    </div>
+    </ReactLenis>
   );
 };
 
