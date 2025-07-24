@@ -32,9 +32,10 @@ export const FlipLink = ({ children, href }) => {
         hovered: {},
       }}
       href={href}
+      style={{ lineHeight: "11px" }}
       initial="initial"
       whileHover="hovered"
-      className="flex relative cursor-pointer text-[#4d4d4d] overflow-hidden whitespace-nowrap font-Nunito leading-n-1 flex-col gap-3 uppercase
+      className="block  relative cursor-pointer text-[#4d4d4d] overflow-hidden whitespace-nowrap font-Nunito  flex-col gap-3 uppercase
          text-[14px] font-bold text-right"
     >
       <motion.div

@@ -7,11 +7,11 @@ export default function MagneticButton({ children }) {
 
   useEffect(() => {
     const xTo = gsap.quickTo(magnetic.current, "x", {
-      duration: 1,
+      duration: 1.2,
       ease: "elastic.out(1, 0.3)",
     });
     const yTo = gsap.quickTo(magnetic.current, "y", {
-      duration: 1,
+      duration: 1.2,
       ease: "elastic.out(1, 0.3)",
     });
 
