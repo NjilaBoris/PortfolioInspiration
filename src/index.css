@@ -6,8 +6,18 @@
   /* src: url("/public/font/AVGARDD_2.TTF");
   src: url("/public/font/AVGARDDO_2.TTF"); */
 }
+@font-face {
+  font-family: Garde2;
+  src: url("/public/font/AVGARDD_2.TTF");
+}
+@font-face {
+  font-family: Gard3;
+  src: url("/public/font/AVGARDDO_2.TTF");
+}
 @theme {
   --font-Nunito: "Nunito Sans", sans-serif;
+  --font-Garde2: Garde2;
+  --font-Garde3: Garde3;
   --leading-n-1: 12.6481px;
   --leading-n-2: 97px;
 }

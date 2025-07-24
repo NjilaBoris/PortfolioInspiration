@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import useMousePosition from "../../lib/useMousePosition";
 import TextReveal from "../components/TextReveal";
+import Navigation from "../components/Navigation";
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,6 +10,7 @@ const Hero = () => {
   const size = isHovered ? 400 : 40;
   return (
     <div className="h-dvh w-full">
+      <Navigation />
       <motion.div
         className="mask h-screen  absolute text-center w-full flex flex-col justify-center items-center uppercase z-7"
         animate={{

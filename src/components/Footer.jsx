@@ -3,7 +3,7 @@ import { SocialLinks } from "../../constant";
 import MagneticButton from "./MagneticButton";
 import { motion } from "motion/react";
 
-const Socials = () => {
+const Footer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioElementRef = useRef(null);
 
@@ -73,4 +73,4 @@ const Socials = () => {
   );
 };
 
-export default Socials;
+export default Footer;
