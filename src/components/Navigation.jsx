@@ -3,10 +3,13 @@ import { motion } from "motion/react";
 const Navigation = () => {
   return (
     <>
-      <div className="flex z-8  max-w-[79rem] justify-between mt-9 w-full fixed top-0 right-0 left-0 mx-auto">
+      <div className="flex z-30  max-w-[79rem] justify-between mt-9 w-full fixed top-0 right-0 left-0 mx-auto">
         <div className="">
           <MagneticButton>
-            <img src="/hero.svg" className="size-10 cursor-pointer " />
+            <img
+              src="/logo.gif"
+              className="size-10 cursor-pointer z-2 rounded-full"
+            />
           </MagneticButton>
         </div>
         <nav

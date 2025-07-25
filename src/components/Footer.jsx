@@ -16,7 +16,7 @@ const Footer = () => {
   }, [isPlaying]);
   return (
     <footer>
-      <div className="flex  mix-blend-difference z-9 w-fit justify-between  items-center  fixed bottom-20 right-0 left-15 ">
+      <div className="flex  mix-blend-difference z-20 w-fit justify-between  items-center  fixed bottom-20 right-0 left-15 ">
         <div>
           {SocialLinks.map((link, index) => (
             <a href="#" key={index} className="">
@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <button
         onClick={() => setIsPlaying((prev) => !prev)}
-        className="flex  overflow-hidden z-9 -rotate-90 right-15 bottom-30 fixed uppercase text-[13px] font-bold gap-2"
+        className="flex  overflow-hidden z-30 -rotate-90 right-15 bottom-30 fixed uppercase text-[13px] font-bold gap-2"
       >
         <span className="text-[#4d4d4d] hover:text-[#b7ab98] transition duration-150 cursor-pointer">
           sound
@@ -63,7 +63,7 @@ const Footer = () => {
           </motion.span>
         </span>
         <audio
-          src="audio/golden hour piano - chilled pig.m4a"
+          src="/audio/JVKE - golden hour (Karaoke Version).m4a"
           loop
           ref={audioElementRef}
           className="hidden"

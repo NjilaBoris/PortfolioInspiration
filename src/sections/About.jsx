@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useMousePosition from "../../lib/useMousePosition";
 import { motion } from "motion/react";
+import { FadeIn } from "../components/FadeIn";
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,18 +40,20 @@ const About = () => {
           </span>
         </div>
       </motion.div>
-      <div className="h-dvh relative w-full flex justify-center items-center">
-        <div>
-          <h1 className="uppercase text-[10px]  font-semibold tracking-[0.4rem] mb-3.5">
-            about me
-          </h1>
-          <span className="text-[63.2407px] leading-[66px] font-semibold  font-Garde2">
-            I’m a <span className="text-[#ec4e39]">selectively skilled</span>{" "}
-            product <br /> designer with strong focus on <br />
-            producing high quality & <br /> impactful digital experience.
-          </span>
+      <FadeIn>
+        <div className="h-dvh relative w-full flex justify-center items-center">
+          <div>
+            <h1 className="uppercase text-[10px]  font-semibold tracking-[0.4rem] mb-3.5">
+              about me
+            </h1>
+            <span className="text-[63.2407px] leading-[66px] font-semibold  font-Garde2">
+              I’m a <span className="text-[#ec4e39]">selectively skilled</span>{" "}
+              product <br /> designer with strong focus on <br />
+              producing high quality & <br /> impactful digital experience.
+            </span>
+          </div>
         </div>
-      </div>
+      </FadeIn>
     </div>
   );
 };

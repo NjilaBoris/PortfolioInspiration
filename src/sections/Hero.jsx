@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "motion/react";
+import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import useMousePosition from "../../lib/useMousePosition";
 import TextReveal from "../components/TextReveal";
 import Navigation from "../components/Navigation";
@@ -8,6 +8,10 @@ const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
   const size = isHovered ? 400 : 40;
+
+  // const { scrollYProgress } = useScroll();
+
+  // const yAxis = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   return (
     <div className="h-dvh w-full">
       <Navigation />
@@ -36,15 +40,18 @@ const Hero = () => {
           hiding <br /> bad <br /> shit <br /> since <br /> 2009
         </h1>
       </motion.div>
-      <div className="h-screen w-full absolute overflow-hidden -z-1">
+      <motion.div
+        className="h-screen w-full absolute inset-0 overflow-hidden -z-1"
+        // style={{ y: yAxis }}
+      >
         <video
           muted
           autoPlay
           loop
           src="/video/Minh Pham - Multidisciplinary Designer.mp4"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover inset-0"
         />
-      </div>
+      </motion.div>
       <div className="h-screen text-center w-full flex flex-col justify-center items-center uppercase z-7">
         <TextReveal>
           <span className="text-[16px] font-bold">Minh Pham</span>

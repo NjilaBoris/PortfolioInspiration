@@ -16,3 +16,25 @@ export const SocialLinks = [
     icon: "/linkedin.svg",
   },
 ];
+export const works = [
+  {
+    title: "3d",
+    src: "3d.avif",
+    color: "#000000",
+  },
+  {
+    title: "visuals",
+    src: "visuals.avif",
+    color: "#8C8C8C",
+  },
+  {
+    title: "motion",
+    src: "motion.avif",
+    color: "#EFE8D3",
+  },
+  {
+    title: "Product",
+    src: "product.avif",
+    color: "#706D63",
+  },
+];
