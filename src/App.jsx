@@ -7,11 +7,11 @@ import Hero from "./sections/Hero";
 import Footer from "./components/Footer";
 import About from "./sections/About";
 import Works from "./components/Works";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import useMousePosition from "../lib/useMousePosition";
-import { useGSAP } from "@gsap/react";
 import Experience from "./sections/Experience";
+import Moto from "./sections/Moto";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const App = () => {
@@ -42,6 +42,8 @@ const App = () => {
           <Works />
         </div>
         <Experience setHovered={setHovered} />
+        <div className="h-[10rem]" />
+        <Moto setHovered={setHovered} />
         <Footer />
       </div>
     </ReactLenis>
