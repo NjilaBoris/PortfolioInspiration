@@ -4,10 +4,10 @@ import useMousePosition from "../../lib/useMousePosition";
 import TextReveal from "../components/TextReveal";
 import Navigation from "../components/Navigation";
 
-const Hero = () => {
+const Hero = ({ setHovered }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
-  const size = isHovered ? 400 : 40;
+  const size = isHovered ? 400 : 0;
 
   // const { scrollYProgress } = useScroll();
 
@@ -16,7 +16,7 @@ const Hero = () => {
     <div className="h-dvh w-full">
       <Navigation />
       <motion.div
-        className="mask h-screen  absolute text-center w-full flex flex-col justify-center items-center uppercase z-7"
+        className="mask h-screen overflow-hidden   absolute text-center w-full flex flex-col justify-center items-center uppercase z-7"
         animate={{
           maskPosition: `${x - size / 2}px ${y - size / 2}px`,
           maskSize: `${size}px`,
@@ -31,9 +31,11 @@ const Hero = () => {
         <h1
           onMouseLeave={() => {
             setIsHovered(false);
+            setHovered({ active: false });
           }}
           onMouseEnter={() => {
             setIsHovered(true);
+            setHovered({ active: true });
           }}
           className="text-[120px] cursor-default  font-extrabold  leading-n-2 text-center"
         >

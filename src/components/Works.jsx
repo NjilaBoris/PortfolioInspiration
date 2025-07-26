@@ -3,7 +3,7 @@ import { works } from "../../constant";
 import Project from "./Project";
 import Modals from "./Modals";
 
-const Works = () => {
+const Works = ({ setHovered }) => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <div className="w-full h-dvh flex items-center justify-center">
@@ -19,7 +19,7 @@ const Works = () => {
           );
         })}
       </div>
-      <Modals modal={modal} projects={works} />
+      <Modals modal={modal} projects={works} setHovered={setHovered} />
     </div>
   );
 };

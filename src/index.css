@@ -32,7 +32,7 @@ body {
   mask-repeat: no-repeat;
   mask-size: 40px;
   background: #ec4e39;
-  position: absolute;
+
   color: black;
 }
 p {
@@ -41,7 +41,7 @@ p {
 }
 
 .project:hover {
-  opacity: 0.5;
+  color: #ec4e39;
 }
 
 .project:hover h2 {
@@ -54,11 +54,12 @@ p {
 
 .project h3 {
   transition: all 0.4s;
-  font-weight: 300;
+  font-weight: 500;
 }
 .modalContainer {
-  height: 350px;
-  width: 400px;
+  height: 320px;
+  width: 350px;
+  border: 1px solid #b7ab98;
   position: absolute;
   background-color: white;
   overflow: hidden;
@@ -93,7 +94,8 @@ p {
   height: 80px;
   border-radius: 50%;
   background-color: #ec4e39;
-  color: #b7ab98;
+  color: #0d0d0d;
+  font-weight: 700;
   position: absolute;
   z-index: 2;
   display: flex;

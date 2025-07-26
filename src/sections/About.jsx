@@ -3,10 +3,10 @@ import useMousePosition from "../../lib/useMousePosition";
 import { motion } from "motion/react";
 import { FadeIn } from "../components/FadeIn";
 
-const About = () => {
+const About = ({ setHovered }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
-  const size = isHovered ? 400 : 40;
+  const size = isHovered ? 400 : 0;
   return (
     <div className="relative">
       <motion.div
@@ -24,9 +24,11 @@ const About = () => {
         <div
           onMouseLeave={() => {
             setIsHovered(false);
+            setHovered({ active: false });
           }}
           onMouseEnter={() => {
             setIsHovered(true);
+            setHovered({ active: true });
           }}
         >
           <h1 className="uppercase text-[10px] z-15  font-semibold tracking-[0.4rem] mb-3.5">

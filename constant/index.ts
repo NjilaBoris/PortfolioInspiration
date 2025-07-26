@@ -19,22 +19,22 @@ export const SocialLinks = [
 export const works = [
   {
     title: "3d",
-    src: "3d.avif",
-    color: "#000000",
+    src: "motion.avif",
+    color: "#0d0d0d",
   },
   {
     title: "visuals",
-    src: "visuals.avif",
-    color: "#8C8C8C",
+    src: "tutorials.avif",
+    color: "#0d0d0d",
   },
   {
     title: "motion",
     src: "motion.avif",
-    color: "#EFE8D3",
+    color: "#0d0d0d",
   },
   {
     title: "Product",
     src: "product.avif",
-    color: "#706D63",
+    color: "#0d0d0d",
   },
 ];
