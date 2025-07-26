@@ -3,12 +3,19 @@ import useMousePosition from "../../lib/useMousePosition";
 import { motion } from "motion/react";
 import { FadeIn } from "../components/FadeIn";
 
-const About = ({ setHovered }) => {
+const Experience = ({ setHovered }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
   const size = isHovered ? 400 : 0;
   return (
     <div className="relative h-dvh">
+      <div className="h-dvh absolute inset-0 overflow-hidden">
+        <img
+          src="/images/work-1600.jpg"
+          fill
+          className="h-full w-full object-cover -z-1  object-center"
+        />
+      </div>
       <motion.div
         className="h-dvh z-15 mask absolute cursor-default w-full flex justify-center items-center"
         animate={{
@@ -32,7 +39,7 @@ const About = ({ setHovered }) => {
           }}
         >
           <h1 className="uppercase text-[10px] z-15  font-semibold tracking-[0.4rem] mb-3.5">
-            about me
+            experience
           </h1>
           <span className="text-[63.2407px] leading-[66px] font-semibold  font-Garde2">
             A visual designer - with skills that <br /> haven't been replaced by
@@ -46,12 +53,14 @@ const About = ({ setHovered }) => {
         <div className="h-dvh relative w-full flex justify-center items-center">
           <div>
             <h1 className="uppercase text-[10px]  font-semibold tracking-[0.4rem] mb-3.5">
-              about me
+              experience
             </h1>
             <span className="text-[63.2407px] leading-[66px] font-semibold  font-Garde2">
-              I’m a <span className="text-[#ec4e39]">selectively skilled</span>{" "}
-              product <br /> designer with strong focus on <br />
-              producing high quality & <br /> impactful digital experience.
+              Over <span className="text-[#ec4e39]">a decade</span> of
+              experience
+              <br /> in interactive design and <br />
+              working with some of the most <br /> talented people in the
+              business.
             </span>
           </div>
         </div>
@@ -60,4 +69,4 @@ const About = ({ setHovered }) => {
   );
 };
 
-export default About;
+export default Experience;

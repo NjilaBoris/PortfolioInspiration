@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import useMousePosition from "../lib/useMousePosition";
 import { useGSAP } from "@gsap/react";
+import Experience from "./sections/Experience";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const App = () => {
@@ -40,7 +41,7 @@ const App = () => {
         <div>
           <Works />
         </div>
-        <div className="h-dvh" />
+        <Experience setHovered={setHovered} />
         <Footer />
       </div>
     </ReactLenis>

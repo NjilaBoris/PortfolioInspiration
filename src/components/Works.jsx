@@ -6,7 +6,7 @@ import Modals from "./Modals";
 const Works = ({ setHovered }) => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
-    <div className="w-full h-dvh flex items-center justify-center">
+    <div className="w-full h-dvh flex items-center justify-center ">
       <div>
         {works.map((project, index) => {
           return (
