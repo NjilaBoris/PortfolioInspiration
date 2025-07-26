@@ -25,6 +25,7 @@ body {
   background-color: #0d0d0d;
   font-family: Garde;
   color: #b7ab98;
+  overflow: hidden;
 }
 
 .mask {
